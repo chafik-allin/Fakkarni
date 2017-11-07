@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Arcadia Free Bootstrap Template - Home Page</title>
+        <title>Fakkarni | Alliance Assurance</title>
         <meta name="description" content="Your Description Here">
         <meta name="keywords" content="free boostrap, bootstrap template, freebies, free theme, free website, free portfolio theme, portfolio, personal, cv">
         <meta name="author" content="Jenn, ThemeForces.com">
@@ -184,10 +184,10 @@
     <nav id="footer">
         <div class="container">
              <div class="pull-left">
-                <p>2014 © Arcadia. All Rights Reserved. Coded by <a href="https://dribbble.com/jennpereira">Jenn</a> & Designed by <a href="https://dribbble.com/alanpodemski">Alan</a></p>
+                <p>2017 © Fakkarni | Alliance Assurance</a></p>
             </div>
             <div class="pull-right"> 
-                <a href="#home" class="page-scroll">Back to Top <span class="fa fa-angle-up"></span></a>
+                <a href="#home" class="page-scroll"> <span class="fa fa-angle-up"></span></a>
             </div>
         </div>
     </nav>
