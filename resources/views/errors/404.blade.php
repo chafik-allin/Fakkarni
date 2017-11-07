@@ -1,1 +1,1 @@
-error 404
+Page d'erreur 404
