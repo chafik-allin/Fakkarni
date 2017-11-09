@@ -108,7 +108,7 @@ function main() {
 
 
        $("#head-title").typed({
-            strings: ["Connaissez-vous la date d'expiration<br> de votre assurance?^1000", "Vous pouvez oublier^1000", "Nous sommes là pour vous le rappeler^1000"],
+            strings: ["Connaissez-vous la date d'expiration"," de votre assurance?^1000", "Vous pouvez oublier^1000", "Nous sommes là pour vous le rappeler^1000"],
             typeSpeed: 50,
             loop: true,
             contentType: 'html',
