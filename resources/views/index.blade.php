@@ -80,9 +80,6 @@
                 <img src="img/logo.png" class="img-responsive" alt="logo">
             </div>
             <div class="content">
-                <h4 class="wow bounceInLeft" data-wow-duration="2s">Connaissez-vous la date d'expiration de votre assurance?<br>Beaucoup ne la connaissent pas et c'est pour cela qu'Alliance vous offre l'opportunité de ne plus penser à votre assurances en permanence<br>Grâce au site Fakerni.com vous serez tenu au courant.
-</h4>
-                <hr>
                 <div class="header-text btn wow bounceInRight" data-wow-duration="0.5s">
                     <h1><span id="head-title"></span></h1>
                 </div>
@@ -131,15 +128,15 @@
                             <div class="col-md-12"><span id="phone_err" class="text-center"></span></div>
                         </div>
                         <div class="form-group" data-wow-duration="2s" >
-                            <div class="col-md-4 wow fadeInLeft">
+                            <div class="col-md-4 wow fadeInLeft" style="margin-top:10px">
                                 <label><i class="fa fa-user fa-lg"></i> Nom</label>
                                 <input type="text" class="form-control" placeholder="Votre nom complet" name="name" pattern="([a-zA-Z\s])+" required value="{{old('name')}}" >
                             </div>
-                            <div class="col-md-4 wow fadeInDown">
+                            <div class="col-md-4 wow fadeInDown" style="margin-top:10px">
                                 <label><i class="fa fa-mobile fa-lg"></i> Téléphone</label> 
                                 <input type="text" class="form-control" placeholder="Numéro de téléphone" name="phone" pattern="\d{10}" data-toggle="tooltip"  required value="{{old('phone')}}" />
                             </div>
-                            <div class="col-md-4 wow fadeInRight">
+                            <div class="col-md-4 wow fadeInRight" style="margin-top:10px">
                                 <label><i class="fa fa-calendar fa-lg"></i> Date d'expiration</label>
                                 <input type="text" id="datepicker" class="form-control" placeholder="Date d'expiration" name="date_exp" required value="{{old('date_exp')}}"  />
                             </div>
@@ -155,18 +152,19 @@
                             <div class="col-md-12">
                                 <span  id="res_assurance"></span>
                                 <div class="owl-carousel owl-theme wow fadeInUp">
-                                    <div class="item" id="1">
-                                        <img  src="{{asset('img/portfolio/01.jpg')}}" class=" img-responsive img-circle"  alt="" />
+                                    <div class="item" id="1" style="width:85% !important">
+                                        <img  src="{{asset('img/assurrances/18000.png')}}" class=" img-responsive img-circle"  alt=""/>
                                     </div>
-                                    <div class="item" id="2">
-                                       <img  src="{{asset('img/portfolio/02.jpg')}}" class=" img-responsive img-circle" alt="" />
+                                    <div class="item" id="2" style="width:85% !important">
+                                       <img  src="{{asset('img/assurrances/6000.png')}}" class=" img-responsive img-circle" alt="" />
                                     </div>
-                                    <div class="item" id="3">
-                                        <img  src="{{asset('img/portfolio/03.jpg')}}" class=" img-responsive img-circle" alt="" />
+                                    <div class="item" id="3" style="width:85% !important">
+                                        <img  src="{{asset('img/assurrances/12000.png')}}" class=" img-responsive img-circle" alt=""   />
                                     </div>
-                                    <div class="item" id="4">
-                                        <img  src="{{asset('img/portfolio/04.jpg')}}" class=" img-responsive img-circle"  alt="" />
+                                    <div class="item" id="4" style="width:85% !important">
+                                        <img  src="{{asset('img/assurrances/18000.png')}}" class=" img-responsive img-circle"  alt=""  />
                                     </div>
+
                                 </div>
                             </div>
                         </div>

@@ -44,7 +44,7 @@
         });
 
         $('.owl-carousel .item ').hover(function(){
-           $(this).css({'border': '5px solid #b4e0f2', 'border-radius':'50%'});
+           $(this).css({'border': '5px solid #fd4f00', 'border-radius':'50%'});
            $(this).addClass('animated rotateIn');
         }, function()
         {
@@ -108,9 +108,10 @@ function main() {
 
 
        $("#head-title").typed({
-            strings: ["Vous pouvez oublier^1000", "Nous sommes là pour vous le rappeler^1000"],
-            typeSpeed: 100,
+            strings: ["Connaissez-vous la date d'expiration<br> de votre assurance?^1000", "Vous pouvez oublier^1000", "Nous sommes là pour vous le rappeler^1000"],
+            typeSpeed: 50,
             loop: true,
+            contentType: 'html',
             startDelay: 100
           });
 
@@ -121,7 +122,6 @@ function main() {
       
         $('.owl-carousel').owlCarousel({
             loop:true,
-            margin: 10,
             autoplay: true,
              responsiveClass:true,
              autoplayTimeout:100,

@@ -14,14 +14,15 @@ body, html{
 	.container {
 		width: 960px;
 	}
+
+	#text-header
+	{
+		line-height: 20px !important;
+	}
 }
 h1{
 	font-weight: 700;
 	font-size: 46px;
-}
-#text-header
-{
-	line-height: 50px !important;
 }
 h2{
 	text-transform: uppercase;
@@ -75,8 +76,9 @@ a:focus{
 	color: #ffffff;
 }
 .bga{
-	background: rgba(0,0,0,0.5);
-	height: 100%
+	background: rgba(0,0,0,1);
+	height: 100%;
+	width: 100%;
 }
 #home a.down-btn span.fa.fa-angle-down {
 	font-size: 26px;
@@ -89,7 +91,7 @@ a:focus{
 	cursor: pointer;
 }
 .content{
-	padding-top: 5%;
+	padding-top: 29%;
 
 }
 
@@ -276,9 +278,9 @@ ul>li
 	list-style: none;
 }
 #inscription{
-	padding: 20px 50px;
 	color: #555;
 }
+
 label{
 	color: #00add2;
 }

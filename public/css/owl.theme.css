@@ -18,7 +18,7 @@
     cursor: pointer;
     border-radius: 3px; }
     .owl-theme .owl-nav [class*='owl-']:hover {
-      color: #FFF;
+      color: #fd4f00;
       text-decoration: none; }
   .owl-theme .owl-nav .disabled {
     opacity: 0.5;
