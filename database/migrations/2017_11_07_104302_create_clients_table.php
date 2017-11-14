@@ -6,18 +6,17 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateClientsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    
     public function up()
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('first_name');
+            $table->string('last_name');
             $table->string('phone');
-            $table->enum('type',[1,2,3,4]);
+            $table->string('wilaya');
+            $table->string('email')->nullable();
+            $table->enum('type',[6000, 12000,18000,-1]);
             $table->date('date_exp');
             $table->timestamps();
         });

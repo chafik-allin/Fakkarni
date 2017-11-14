@@ -129,13 +129,28 @@
                         </div>
                         <div class="form-group" data-wow-duration="2s" >
                             <div class="col-md-4 wow fadeInLeft" style="margin-top:10px">
-                                <label><i class="fa fa-user fa-lg"></i> Nom</label>
-                                <input type="text" class="form-control" placeholder="Votre nom complet" name="name" pattern="([a-zA-Z\s])+" required value="{{old('name')}}" >
+                                <label><i class="fa fa-user fa-lg"></i> Nom *</label>
+                                <input type="text" class="form-control" placeholder="Votre nom" name="first_name" pattern="([a-zA-Z\s])+" required value="{{old('first_name')}}" >
+                            </div>
+                            <div class="col-md-4 wow fadeInLeft" style="margin-top:10px">
+                                <label><i class="fa fa-user fa-lg"></i> Prénom *</label>
+                                <input type="text" class="form-control" placeholder="Votre prénom" name="last_name" pattern="([a-zA-Z\s])+" required value="{{old('last_name')}}" >
                             </div>
                             <div class="col-md-4 wow fadeInDown" style="margin-top:10px">
-                                <label><i class="fa fa-mobile fa-lg"></i> Téléphone</label> 
-                                <input type="text" class="form-control" placeholder="Numéro de téléphone" name="phone" pattern="\d{10}" data-toggle="tooltip"  required value="{{old('phone')}}" />
+                                <label><i class="fa fa-mobile fa-lg"></i> Téléphone *</label> 
+                                <input type="text" class="form-control" placeholder="Numéro de téléphone" name="phone" pattern="\d{10}"  required value="{{old('phone')}}" />
                             </div>
+
+                            <div class="col-md-4 wow fadeInDown" style="margin-top:10px">
+                                <label><i class="fa fa-envelope fa-lg"></i> Email </label> 
+                                <input type="email" class="form-control" placeholder="Votre email" name="email"  value="{{old('email')}}" />
+                            </div>
+
+                            <div class="col-md-4 wow fadeInDown" style="margin-top:10px">
+                                <label><i class="fa fa-map-marker fa-lg"></i> Wilaya * </label> 
+                                <input type="text" class="form-control" placeholder="Votre wilaya" name="wilaya" required value="{{old('wilaya')}}" />
+                            </div>
+
                             <div class="col-md-4 wow fadeInRight" style="margin-top:10px">
                                 <label><i class="fa fa-calendar fa-lg"></i> Date d'expiration</label>
                                 <input type="text" id="datepicker" class="form-control" placeholder="Date d'expiration" name="date_exp" required value="{{old('date_exp')}}"  />
@@ -152,16 +167,16 @@
                             <div class="col-md-12">
                                 <span  id="res_assurance"></span>
                                 <div class="owl-carousel owl-theme wow fadeInUp">
-                                    <div class="item" id="1" style="width:85% !important">
+                                    <div class="item" id="18000" style="width:85% !important">
                                         <img  src="{{asset('img/assurrances/18000.png')}}" class=" img-responsive img-circle"  alt=""/>
                                     </div>
-                                    <div class="item" id="2" style="width:85% !important">
+                                    <div class="item" id="6000" style="width:85% !important">
                                        <img  src="{{asset('img/assurrances/6000.png')}}" class=" img-responsive img-circle" alt="" />
                                     </div>
-                                    <div class="item" id="3" style="width:85% !important">
+                                    <div class="item" id="12000" style="width:85% !important">
                                         <img  src="{{asset('img/assurrances/12000.png')}}" class=" img-responsive img-circle" alt=""   />
                                     </div>
-                                    <div class="item" id="4" style="width:85% !important">
+                                    <div class="item" id="18000" style="width:85% !important">
                                         <img  src="{{asset('img/assurrances/18000.png')}}" class=" img-responsive img-circle"  alt=""  />
                                     </div>
 
@@ -170,7 +185,7 @@
                         </div>
                         <input type="hidden" name="type" value="">
                         <div class="form-group" style="clear: both;">
-                            <button class="btn send-btn btn-block wow fadeInDown"><i class="fa fa-send"></i> Send</button>
+                            <button class="btn send-btn btn-block wow fadeInDown"><i class="fa fa-send"></i> Envoyer</button>
                         </div>
 
                     </form>
