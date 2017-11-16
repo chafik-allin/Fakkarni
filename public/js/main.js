@@ -5,7 +5,7 @@
 //
  $(document).ready(function()
   {
-        new WOW().init();
+      new WOW().init();
 
        $('input[name=phone]').keypress(function(e)
        {
@@ -41,6 +41,15 @@
             if($("#res_assurence").hasClass('alert alert-danger text-center btn-block'))
                 $('#res_assurence').removeClass('alert alert-danger text-center btn-block');
 
+        });
+
+        $('.btn-shake').hover(function()
+        {
+          $(this).addClass('animated shake');
+        },
+        function()
+        {
+          $(this).removeClass('animated shake');  
         });
 
         $('.owl-carousel .item ').hover(function(){
@@ -109,7 +118,7 @@ function main() {
 
        $("#head-title").typed({
             strings: ["Connaissez-vous la date d'expiration"," de votre assurance?^1000", "Vous pouvez oublier^1000", "Nous sommes là pour vous le rappeler^1000"],
-            typeSpeed: 50,
+            typeSpeed: 20,
             loop: true,
             contentType: 'html',
             startDelay: 100

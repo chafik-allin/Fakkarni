@@ -1,5 +1,4 @@
 
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
 @import url(http://fonts.googleapis.com/css?family=Raleway:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
 
 
@@ -10,7 +9,8 @@ body, html{
   overflow-x: hidden;
   font-family: 'Raleway', sans-serif;
 }
-@media (min-width: 1200px){
+@media (min-width: 1200px)
+{
 	.container {
 		width: 960px;
 	}
@@ -20,6 +20,8 @@ body, html{
 		line-height: 20px !important;
 	}
 }
+
+
 h1{
 	font-weight: 700;
 	font-size: 46px;
@@ -66,14 +68,15 @@ a:focus{
 	text-decoration: none;
 }
 #home{
-	background: url(../img/bg1.jpg);
+	background: url(../img/alliance-assurance-background.jpg);
 	background-size: cover;
-	background-position: center;
+	background-position: bottom right;
 	background-repeat: no-repeat;
 	height: 100%;
-	min-height: 710px;	
+	background-attachment: fixed;
 	padding-top: 60px;
 	color: #ffffff;
+	padding-bottom: 20px;
 }
 .bga{
 	background: rgba(0,0,0,1);

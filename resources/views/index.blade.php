@@ -7,17 +7,16 @@
         <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Fakerni | Alliance Assurance</title>
-        <meta name="description" content="Your Description Here">
-        <meta name="keywords" content="free boostrap, bootstrap template, freebies, free theme, free website, free portfolio theme, portfolio, personal, cv">
-        <meta name="author" content="Jenn, ThemeForces.com">
+        <meta name="description" content="Connaissez-vous la date d'expiration de votre assurance? Beaucoup ne la connaissent pas et c'est pour cela qu'Alliance vous offre l'opportunité de ne plus penser à votre assurances en permanence. Grâce au site Fakerni.com vous serez tenu au courant">
+
+        <meta name="keywords" content="Fakerni, Alliance, Assurance">
+        
+        <meta name="author" content="ALLIN">
 
         <!-- Favicons
         ================================================== -->
         <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon">
-        <link rel="apple-touch-icon" href="{{asset('img/apple-touch-icon.png')}}">
-        <link rel="apple-touch-icon" sizes="72x72" href="{{asset('img/apple-touch-icon-72x72.png')}}">
-        <link rel="apple-touch-icon" sizes="114x114" href="{{asset('img/apple-touch-icon-114x114.png')}}">
-
+ 
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css"  href="{{asset('css/bootstrap.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('font-awesome-4.2.0/css/font-awesome.css')}}">
@@ -128,6 +127,7 @@
                             <div class="col-md-12"><span id="phone_err" class="text-center"></span></div>
                         </div>
                         <div class="form-group" data-wow-duration="2s" >
+                        <p style="color: #777"><i>* Champs obligatoire</i></p>
                             <div class="col-md-4 wow fadeInLeft" style="margin-top:10px">
                                 <label><i class="fa fa-user fa-lg"></i> Nom *</label>
                                 <input type="text" class="form-control" placeholder="Votre nom" name="first_name" pattern="([a-zA-Z\s])+" required value="{{old('first_name')}}" >
@@ -137,7 +137,7 @@
                                 <input type="text" class="form-control" placeholder="Votre prénom" name="last_name" pattern="([a-zA-Z\s])+" required value="{{old('last_name')}}" >
                             </div>
                             <div class="col-md-4 wow fadeInDown" style="margin-top:10px">
-                                <label><i class="fa fa-mobile fa-lg"></i> Téléphone *</label> 
+                                <label><i class="fa fa-mobile fa-lg"></i> Téléphone *</label>
                                 <input type="text" class="form-control" placeholder="Numéro de téléphone" name="phone" pattern="\d{10}"  required value="{{old('phone')}}" />
                             </div>
 
@@ -148,7 +148,17 @@
 
                             <div class="col-md-4 wow fadeInDown" style="margin-top:10px">
                                 <label><i class="fa fa-map-marker fa-lg"></i> Wilaya * </label> 
-                                <input type="text" class="form-control" placeholder="Votre wilaya" name="wilaya" required value="{{old('wilaya')}}" />
+                                <select name="wilaya" id="wilaya" class="form-control">
+                                    @if(old('wilaya'))
+                                    <option value="{{old('wilaya')}}">{{old('wilaya')}}</option>
+                                    @endif
+                                    @foreach($wilayas as $w)
+                                        @continue(old('wilaya') && old('wilaya') == $w)
+                                        <option value="{{$w}}">{{$w}}</option>
+                                    @endforeach
+                                    
+                                </select>
+
                             </div>
 
                             <div class="col-md-4 wow fadeInRight" style="margin-top:10px">
@@ -167,8 +177,10 @@
                             <div class="col-md-12">
                                 <span  id="res_assurance"></span>
                                 <div class="owl-carousel owl-theme wow fadeInUp">
-                                    <div class="item" id="18000" style="width:85% !important">
-                                        <img  src="{{asset('img/assurrances/18000.png')}}" class=" img-responsive img-circle"  alt=""/>
+
+                                    
+                                    <div class="item" id="-1" style="width:85% !important">
+                                        <img  src="{{asset('img/assurrances/none.png')}}" class=" img-responsive img-circle"  alt=""/>
                                     </div>
                                     <div class="item" id="6000" style="width:85% !important">
                                        <img  src="{{asset('img/assurrances/6000.png')}}" class=" img-responsive img-circle" alt="" />
@@ -179,12 +191,13 @@
                                     <div class="item" id="18000" style="width:85% !important">
                                         <img  src="{{asset('img/assurrances/18000.png')}}" class=" img-responsive img-circle"  alt=""  />
                                     </div>
+                                   
 
                                 </div>
                             </div>
                         </div>
                         <input type="hidden" name="type" value="">
-                        <div class="form-group" style="clear: both;">
+                        <div class="form-group btn-shake" style="clear: both;">
                             <button class="btn send-btn btn-block wow fadeInDown"><i class="fa fa-send"></i> Envoyer</button>
                         </div>
 
@@ -197,9 +210,9 @@
     <nav id="footer">
         <div class="container">
              <div class="pull-left">
-                <p>2017 © Fakerni | Alliance Assurance</a></p>
+                <p>2017 © Fakerni | Alliance Assurance</p>
             </div>
-            <div class="pull-right"> 
+            <div class="pull-right">
                 <a href="#home" class="page-scroll"> <span class="fa fa-angle-up"></span></a>
             </div>
         </div>

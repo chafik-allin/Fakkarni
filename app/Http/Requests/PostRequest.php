@@ -31,7 +31,8 @@ class PostRequest extends FormRequest
             'last_name'=>'required',
             'email'=>'nullable|email',
             'phone'=>'required',
-            "wilaya"    =>"required",
+            "wilaya"    =>[ 'required', Rule::in(['Adrar', 'Chlef', "Laghouat", 'Oum El Bouaghi', 'Batna', 'Béjaia', 'Biskra', 'Bechar', 'Blida', 'Bouira', 'Tamanrasset', 'Tebessa','Tlemcen', 'Tiaret', 'Tizi Ouzou', 'Alger', 'Djelfa', 'Jijel', 'Setif', 'Saida', 'Skikda', 'Sidi Bel Abbas', 'Annaba', 'Guelma',
+    'Constantine', 'Médéa','Mostaganem', "M'Sila", 'Mascara', 'Ouargla', 'Oran', 'El Bayadh', 'Illizi', 'Bordj Bou Arreridj', 'Boumerdes', 'El Taref', 'Tindouf', 'Tissemsilt', 'EL Oued', 'Khenchla', 'Souk Ahras', 'Tipaza', 'Mila', 'Ain Defla', 'Naama', 'Ain Temouchent', 'Ghardaia', 'Relizane'])],
             'date_exp'=>"required|date",
             'type'=>[ 'required', Rule::in([-1, 6000, 12000, 18000]) ]  
         ];
@@ -48,7 +49,9 @@ class PostRequest extends FormRequest
             "date_exp.required"     =>  "Veuillez selectionner une date",
             "date_exp.date"         =>  "Le format de la date est incorrect",
             'type.required'         =>  "Veuillez choisir votre assurance",
-            'type.in'               =>  "Le type d'assurance est invalide!"
+            'type.in'               =>  "Le type d'assurance est invalide!",
+            'wilaya.required'       =>  "Veuillez donner votre wilaya",
+            "wilaya.in"             =>  "Cette wilaya n'existe pas!"
         ];
     }
 }
