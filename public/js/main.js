@@ -5,7 +5,9 @@
 //
  $(document).ready(function()
   {
+
       new WOW().init();
+      
 
        $('input[name=phone]').keypress(function(e)
        {
@@ -36,7 +38,7 @@
             }
             selected_item = $(this);
             selected_item.css({'border': '5px solid #00add2', 'border-radius':'50%'});
-            $('input[name=type]').val(selected_item.attr('id'));
+            $('input[name=type]').val(selected_item.attr('value'));
             
             if($("#res_assurence").hasClass('alert alert-danger text-center btn-block'))
                 $('#res_assurence').removeClass('alert alert-danger text-center btn-block');
@@ -80,7 +82,20 @@
 
         });
    
-
+      $('#conditions-fr').change(function()
+      {
+        if($(this).is(':checked'))
+          $('#send-fr').removeAttr('disabled');
+        else
+          $('#send-fr').attr('disabled', 'disabled');
+      });   
+      $('#conditions-ar').change(function()
+      {
+        if($(this).is(':checked'))
+          $('#send-ar').removeAttr('disabled');
+        else
+          $('#send-ar').attr('disabled', 'disabled');
+      });
 
  });
 
@@ -129,11 +144,14 @@ function main() {
               dateFormat: 'yy-mm-dd' 
           });
       
+
+        $("#datepickerar").datepicker(
+          { minDate: 0,
+              dateFormat: 'yy-mm-dd' 
+          });
+      
+      
         $('.owl-carousel').owlCarousel({
-            loop:true,
-            autoplay: true,
-             responsiveClass:true,
-             autoplayTimeout:100,
               navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
             responsive:{
                 0:{

@@ -19,7 +19,11 @@ class PageController extends Controller
     public function Post(PostRequest $request )
     {
     	Client::create($request->all());
-    	return redirect('/#inscription')->withSuccess('Votre inscription a été effectué avec succèss');
+        if($request->lang=="fr")
+            return redirect('/#inscription')->withSuccess("Nous vous remercions d'avoir bien voulu remplir ce formulaire");
+    
+        return redirect('/#inscription')->withSuccess('نشكركم على الموافقة على ملء هذا النموذج');
+        
     }
 
 }
